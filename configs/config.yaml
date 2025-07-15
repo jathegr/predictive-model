@@ -1,0 +1,22 @@
+data:
+  # Path to the master list of tickers and how many to sample
+  symbols_file: "../stock_tickers.txt"
+  sample_size: 50
+
+  start: "2018-01-01"
+  end: null
+  fs_url: "http://localhost:8000"
+
+model:
+  version: "0.1"
+  cv_splits: 5
+  threshold: 0.5
+  params:
+    n_estimators: 100
+    max_depth: 4
+    learning_rate: 0.1
+  n_trials: 20
+  promote_delta: 0.001
+
+artifacts:
+  dir: "artifacts"
